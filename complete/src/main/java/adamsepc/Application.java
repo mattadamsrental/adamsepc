@@ -9,7 +9,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.util.Arrays;
 import java.util.Properties;
@@ -47,17 +46,4 @@ public class Application extends WebMvcAutoConfiguration.WebMvcAutoConfiguration
 
         return javaMailSender;
     }
-
-    @Bean
-    public ClassLoaderTemplateResolver emailTemplateResolver(){
-        ClassLoaderTemplateResolver emailTemplateResolver = new ClassLoaderTemplateResolver();
-        emailTemplateResolver.setPrefix("/mails/");
-        emailTemplateResolver.setSuffix(".html");
-        emailTemplateResolver.setTemplateMode("LEGACYHTML5");
-        emailTemplateResolver.setCharacterEncoding("UTF-8");
-        emailTemplateResolver.setOrder(1);
-
-        return emailTemplateResolver;
-    }
-
 }
