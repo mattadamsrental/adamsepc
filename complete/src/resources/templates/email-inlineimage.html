@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Template for HTML email with inline image</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p>
+    <img src="../adamsepclogo.jpg" th:src="'cid:' + ${imageResourceName}" />
+</p>
+<p>Hi Mike</p>
+<p>You have received the following contact through your website:</p>
+<p><strong>From:&nbsp;</strong><th:block th:text="${from}">Hello, Peter Static!</th:block></p>
+<p><strong>Contact:&nbsp;</strong><th:block th:text="${contact}">Hello, Peter Static!</th:block></p>
+<p><strong>Email:&nbsp;</strong><th:block th:text="${email}">Hello, Peter Static!</th:block></p>
+<p><strong>Enquiry Type:&nbsp;</strong><th:block th:text="${enquiryType}">Hello, Peter Static!</th:block></p>
+<p><strong>Enquiry:</strong></p>
+<p th:text="${enquiry}">Enquiry blah blah</p>
+<p> </p>
+</body>
+</html>
