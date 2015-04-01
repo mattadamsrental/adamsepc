@@ -40,7 +40,7 @@ public class EmailService {
                 new MimeMessageHelper(mimeMessage, true, "UTF-8"); // true = multipart
         message.setSubject("[adamsepc] Website Contact Request");
         message.setFrom("lowcostepc@gmail.com");
-        message.setTo("matt.adams2@gmail.com");
+        message.setTo("adamsepc@aol.com");
 
         // Create the HTML body using Thymeleaf
         final String htmlContent = this.templateEngine.process("email-inlineimage", ctx);
