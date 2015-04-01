@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Template for HTML email with inline image</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="${from}">
+    Hello, Peter Static!
+</p>
+<p>
+    You can find <b>your inlined image</b> just below this text.
+</p>
+<p>
+    <img src="sample.png" th:src="'cid:' + ${imageResourceName}" />
+</p>
+<p>
+    Regards, <br />
+    <em>The Thymeleaf Team</em>
+</p>
+</body>
+</html>

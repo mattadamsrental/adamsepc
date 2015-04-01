@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link lang="en"></link>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="adamsepc provides low cost energy performance certificates (EPC) in Daventry and surrounding areas. Locally based we provided a friendly and personal service for all your EPC needs in the Daventry area."/>
+    <meta name="author" content=""/>
+    <link rel="icon" href="../../favicon.ico"/>
+
+    <title>Low Cost EPC Daventry - adamsepc</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <img class="logo" src="images/adamsepclogoblack.jpg" alt="low cost epc daventry"/>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="navbar-brand navbar-right">
+            <p>Tel: (07769) 696777</p>
+            <p>Email: <a href="mailto:adamsepc@aol.com">adamsepc@aol.com</a></p>
+          </div>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h3 class="contactMsg" th:if="${showContactMsg}">Thank you for contacting us, we will be in touch shortly.</h3>
+        <h1>Low Cost EPC in Daventry from Adams EPC</h1>
+          <p>We provide EPC services in Daventry with low prices fixed on the property size.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li>We cover properties in Daventry and surrounding areas</li>
+                <li>Locally based fully qualified energy assessor</li>
+                <li>Friendly and professional service</li>
+                <li>Appointments booked for your convenience</li>
+                <li>Low cost EPC in Daventry without compromising on service</li>
+              </ul>
+              <br/>
+            </div>
+            <div class="col-md-2"><img class="epc_houses" src="images/epc_houses.jpg" alt="low cost epc daventry"/></div>
+          </div>
+            <p>For all your EPC needs in Daventry, call us now on (07769) 696777, email <a href="mailto:adamsepc@aol.com">enquiries@lowcostepcdaventry.co.uk</a> or contact us using our simple form and we will get back to you with a simple low cost quote.</p>
+            <a class="btn btn-primary btn-lg btn-pricing" href="javascript:scrollToPricing();" role="button">Pricing &raquo;</a>
+            <a class="btn btn-primary btn-lg btn-booknow" href="javascript:scrollToContactForm();" role="button">Book Now &raquo;</a>
+            <!--<a class="btn btn-primary btn-lg btn-about" href="#" role="button">More About Us&raquo;</a>-->
+            <a class="btn btn-primary btn-lg btn-about" href="javascript:scrollToContactForm();" role="button">Contact Us &raquo;</a>
+            <a class="btn btn-primary btn-lg btn-contact" target="_blank" href="../../../../../../../dadweb/pdf/exampleEpc.pdf" role="button">See an example EPC &raquo;</a>
+      </div>
+        
+    </div>
+
+    <div class="container detailsContainer">
+      <div class="row">
+        <div class="what-is-epc col-md-4">
+          <h2 class="greenText ">What is an EPC?</h2>
+          <p>An Energy Performance Certificate (EPC) contains information about how energy is used in a home or a business premises, along with details of how much the energy used actually costs.</p>
+          <p>An EPC gives a property an energy efficiency rating from A (most efficient) to G (least efficient) and is valid for 10 years.</p>
+          <p>Adams EPC can provide a low cost EPC for properties in the Daventry area with a no fuss convenient service.</p>
+          <p><a class="btn btn-default btn-what-is" href="javascript:scrollToMoreInfo();" role="button">Find out more &raquo;</a></p>
+        </div>
+        <div class="do-i-need-epc col-md-4">
+          <h2 class="orangeText">Do I need an EPC?</h2>
+          <p>If your are selling or renting your property in the Daventry area you must have an EPC before the property goes on the market as this is a legal requirement in England and Wales.</p>
+          <p>Even if you are not marketing your property, an EPC is a useful insight into your energy consumption and could give ideas on how to improve the efficieny of your property and reduce energy bills.</p>
+          <p>Book your low cost EPC in Daventry with our locally based energy assesor as a first step to marketing your property.</p>
+          <p><a class="btn btn-default" href="javascript:scrollToContactForm();" role="button">Book now &raquo;</a></p>
+       </div>
+        <div class="whats-involved col-md-4">
+          <h2 class="redText">What's involved?</h2>
+          <p>Our friendly local Domestic Energy Assesor will attend your property in Daventry and afterwards a certificate will be issued to illustrate to you how efficient your house currently is and how efficient it could be with the improvements suggested within the EPC (Energy Performance Certificate).</p>
+          <p>The process is quick and simple. We can provide your low cost EPC in Daventry with no hassle and no fuss.</p>
+          <p>Any further questions?...</p>
+          <p><a class="btn btn-default btn-whats-involved" href="javascript:scrollToContactForm();" role="button">Contact us &raquo;</a></p>
+        </div>
+      </div>
+    </div> 
+    <a id="info"></a>
+    <div class="container epcInfoContainer">
+      <div class="row">
+        <h2>Energy Performance Certificates</h2>
+        <p>Energy Performance Certificates (EPCs) are needed whenever a property in Daventry is:
+          <ul>
+            <li>built</li>
+            <li>sold</li>
+            <li>rented</li>
+          </ul>
+        </p>
+        <p>You must order an EPC for potential buyers and tenants before you market your Daventry property to sell or rent.</p>
+        <p>An EPC contains:
+          <ul>
+            <li>information about a property’s energy use and typical energy costs</li>
+            <li>recommendations about how to reduce energy use and save money</li>
+            <li>An EPC gives a property an energy efficiency rating from A (most efficient) to G (least efficient) and is valid for 10 years.</li>
+          </ul>
+        </p>
+        <h3>Buildings that don’t need an EPC</h3>
+        <p>These include:
+          <ul>
+              <li>places of worship</li>
+              <li>temporary buildings that will be used for less than 2 years</li>
+              <li>stand-alone buildings with total useful floor space of less than 50 square metres</li>
+              <li>industrial sites, workshops and non-residential agricultural buildings that don’t use a lot of energy</li>
+              <li>stand-alone buildings with total useful floor space of less than 50 square metres</li>
+              <li>some buildings that are due to be demolished</li>
+              <li>holiday accommodation that’s rented out for less than 4 months a year or is let under a licence to occupy</li>
+              <li>listed buildings - you should get advice from your local authority conservation officer if the work would alter the building’s character</li>
+              <li>residential buildings intended to be used less than 4 months a year</li>
+          </ul>
+        </p>
+        <p><a class="btn btn-default" href="javascript:scrollToContactForm();" role="button">Click here to contact us, get a quote or book an EPC in Daventry</a></p>
+      </div>
+    </div>
+    <a id="pricing"></a>
+    <div class="container pricingContainer">
+      <div class="row">
+        <div class="col-md-6 pricingDiv">
+          <img class="pricingImage" src="images/lowcostepcdaventry.jpg" alt="low cost epc daventry"/>
+        </div>
+        <div class="col-md-6 pricing">
+          <h3>Pricing</h3>
+          <p>We have a very simple low cost pricing structure for you EPC in Daventry.</p>
+          <ul>
+            <li>For properties of up to 6 habitable rooms: £40</li>
+            <ul>
+              <li>e.g. 2 reception rooms, 4 bedrooms</li>
+              <li>3 reception rooms, 3 bedrooms</li>
+            </ul>
+            <li>For each additional room add habitable room add £5</li>
+            <ul>
+              <li>e.g. 2 reception rooms, 5 bedrooms = £45</li>
+            </ul>
+          </ul>
+        </div>
+      </div> 
+      <br/> 
+      <p class="quotationText">For a firm quotation or to discuss your requirements in more detail, contact us today.</p>
+      <p>Call us on 07769 696777 or email adamsepc@aol.com and we will get back to you.</p>
+    </div>
+    <a id="contactForm"></a>
+    <div class="container contactFormDiv">
+      <p class="contactHeading">Contact us... fill in the form and we'll get back to you!</p><br/>
+      <div class="col-md-3">
+        <p><label>Full name</label></p>
+        <p><label>Email address</label></p>
+        <p><label>Contact Number</label></p>   
+        <p><label>Please select an option</label></p>
+        <p><label>Please tell us more about your query</label></p>
+      </div>
+      <div class="col-md-9">
+        <form id="contactFormForm" name="contactForm" action="/contact">
+          <p><input type="text" name="name"/></p>
+          <p><input type="text" name="email"/></p>
+          <p><input type="text" name="contact"/></p>
+          <p>
+            <input type="radio" name="enquiryType" value="booking"/><label>Make a booking</label>
+            <input type="radio" name="enquiryType" value="quote"/><label>Give me a firm quote</label>
+            <input type="radio" name="enquiryType" value="callme"/><label>Call me back</label>
+          </p>
+          <textarea rows="4" cols="50" name="enquiry"></textarea>
+          <p><input type="submit" value="Submit your query" onclick="javascript:submitQuery();"/>&nbsp;&nbsp;or...&nbsp;&nbsp;<a href="javascript:refresh();">Cancel</a></p>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <hr/>
+      <footer>
+        <p>&copy; Mike Adams 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/adamsepc.js"></script>
+  </body>
+</html>
