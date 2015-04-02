@@ -33,7 +33,7 @@ public class HomeController {
             return "daventry";
         } else if(host.contains("rugby")) {
             return "Rugby";
-        } else if(host.contains("rowcester")) {
+        } else if(host.contains("towcester")) {
             return "Towcester";
         } else if(host.contains("northampton")) {
             return "Northampton";
