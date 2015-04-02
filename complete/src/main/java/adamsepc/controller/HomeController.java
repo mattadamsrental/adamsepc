@@ -30,14 +30,14 @@ public class HomeController {
 
     private String getLocation(final String host) {
         if(host.contains("Daventry")) {
-            return "Daventry";
-        } else if(host.contains("Rugby")) {
+            return "daventry";
+        } else if(host.contains("rugby")) {
             return "Rugby";
-        } else if(host.contains("Towcester")) {
+        } else if(host.contains("rowcester")) {
             return "Towcester";
-        } else if(host.contains("Northampton")) {
+        } else if(host.contains("northampton")) {
             return "Northampton";
-        } else if(host.contains("Banbury")) {
+        } else if(host.contains("banbury")) {
             return "Banbury";
         }
         return "Daventry";
