@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller
 public class HomeController {
     
@@ -19,7 +22,19 @@ public class HomeController {
         if(fromContact) {
             modelMap.put("showContactMsg", true);
         }
+        modelMap.put("sisterSites", getSisterSiteLinks(getLocation(host)));
         return new ModelAndView("index", modelMap);
+    }
+
+    private Map<String, String> getSisterSiteLinks(final String location) {
+        final Map<String,String> sisterSites = new HashMap<>();
+        sisterSites.put("Daventry", "www.lowcostepcdaventry.co.uk");
+        sisterSites.put("Northampton", "www.lowcostepcnorthampton.co.uk");
+        sisterSites.put("Towcester", "www.lowcostepctowcester.co.uk");
+        sisterSites.put("Banbury", "www.lowcostepcbanbury.co.uk");
+        sisterSites.put("Rugby", "www.lowcostepcrugby.co.uk");
+        sisterSites.remove(location);
+        return sisterSites;
     }
 
     private String getMetaDescription(final String host) {
