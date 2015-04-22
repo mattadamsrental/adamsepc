@@ -38,9 +38,8 @@ public class HomeController {
     }
 
     private String getMetaDescription(final String host) {
-        return String.format("EPC in %s - Low cost EPC for your %s property from Adams EPC. An EPC is" +
-                " required for all properies being sold or rented out. Get an EPC now for your property " +
-                "in the %s area from Adams EPC; locally based with a friendly and personal service.", getLocation(host), getLocation(host), getLocation(host));
+        return String.format("EPC in %s - Low cost EPC for your property from Adams EPC.  Get an EPC now for your property " +
+                "from Adams EPC; locally based with a friendly and personal service.", getLocation(host));
     }
 
     private String getLocation(final String host) {
