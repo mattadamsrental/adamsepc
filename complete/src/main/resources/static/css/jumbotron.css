@@ -3,6 +3,7 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
   font-size: 1.5em;
+	font-family: Lucida Sans Unicode;
 }
 
 .navbar {
@@ -100,6 +101,23 @@ h1 {
 }
 .whats-involved {
 
+}
+.accreditedImages {
+	width: 270px;
+	float: right;
+	margin-right: 40px;
+	margin-top: 20px;
+	margin-left: 40px;
+	list-style-image: url('../images/tick_icon.png');
+	border-style: solid;
+	border-width: 2px;
+	border-color: grey;
+	border-radius: 10px;
+	padding: 30px;
+	color: green;
+}
+.accreditedImage {
+	width: 200px;
 }
 .btn-whats-involved {
 	margin-top: 19px;
