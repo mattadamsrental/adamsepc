@@ -119,6 +119,13 @@ h1 {
 .accreditedImage {
 	width: 200px;
 }
+.conservationImage {
+	float: left;
+	width: 159px;
+	margin-right: 40px;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
 .btn-whats-involved {
 	margin-top: 19px;
 }
