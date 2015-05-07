@@ -9,9 +9,19 @@ body {
 .navbar {
 	height: 80px;
 }
-
+.btn {
+	margin-bottom: 20px;
+}
 h1 {
 	font-size: 40px !important;
+}
+.jumbotron {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	color: #fff;
+}
+
+.jumbotron .container {
+	background: url(../images/grey-box.png);
 }
 
 .jumbotron ul {
