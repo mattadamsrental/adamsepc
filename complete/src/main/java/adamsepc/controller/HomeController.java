@@ -17,7 +17,7 @@ public class HomeController {
     public ModelAndView index(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
         final ModelMap modelMap = new ModelMap();
         modelMap.put("location", getLocation(host));
-        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("metaDescription", getMetaDescription(host, "Home"));
         modelMap.put("altImage", "EPC " + getLocation(host));
         if(fromContact) {
             modelMap.put("showContactMsg", true);
@@ -30,7 +30,7 @@ public class HomeController {
     public ModelAndView about(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
         final ModelMap modelMap = new ModelMap();
         modelMap.put("location", getLocation(host));
-        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("metaDescription", getMetaDescription(host, "About Us"));
         modelMap.put("altImage", "EPC " + getLocation(host));
         if(fromContact) {
             modelMap.put("showContactMsg", true);
@@ -43,7 +43,7 @@ public class HomeController {
     public ModelAndView information(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
         final ModelMap modelMap = new ModelMap();
         modelMap.put("location", getLocation(host));
-        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("metaDescription", getMetaDescription(host, "EPC Information"));
         modelMap.put("altImage", "EPC " + getLocation(host));
         if(fromContact) {
             modelMap.put("showContactMsg", true);
@@ -56,7 +56,7 @@ public class HomeController {
     public ModelAndView pricing(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
         final ModelMap modelMap = new ModelMap();
         modelMap.put("location", getLocation(host));
-        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("metaDescription", getMetaDescription(host, "Pricing"));
         modelMap.put("altImage", "EPC " + getLocation(host));
         if(fromContact) {
             modelMap.put("showContactMsg", true);
@@ -69,7 +69,7 @@ public class HomeController {
     public ModelAndView contact(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
         final ModelMap modelMap = new ModelMap();
         modelMap.put("location", getLocation(host));
-        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("metaDescription", getMetaDescription(host, "Contact Us"));
         modelMap.put("altImage", "EPC " + getLocation(host));
         if(fromContact) {
             modelMap.put("showContactMsg", true);
@@ -89,9 +89,8 @@ public class HomeController {
         return sisterSites;
     }
 
-    private String getMetaDescription(final String host) {
-        return String.format("EPC in %s - Low cost EPC for your property from Adams EPC.  Get an EPC now for your property " +
-                "from Adams EPC; locally based with a friendly and personal service.", getLocation(host));
+    private String getMetaDescription(final String host, final String page) {
+        return String.format("Adams EPC in %s - %s. Locally based, no hassle, friendly service at your convenience. An EPC for your property from just £40.", getLocation(host), page);
     }
 
     private String getLocation(final String host) {
