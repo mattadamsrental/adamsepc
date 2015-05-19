@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <link lang="en"></link>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" th:content="${metaDescription}"/>
+        <meta name="google-site-verification" content="I9Km4hhR8Nf265lMNg0dDpXtvcf_m3u9NcuRgZw2cXk" />
+        <link rel="icon" href="../../favicon.ico"/>
+        <title>EPC <th:block th:text="${location}">Daventry</th:block></title>
+        <th:block th:replace="headerFooter :: staticInclude"></th:block>
+    </head>
+    <body>
+        <th:block th:replace="headerFooter :: header"></th:block>
+        <div class="container pricingContainer">
+            <h1 class="pricing-header">Cheap EPC <th:block th:text="${location}">Daventry</th:block></h1>
+            <p>We have a simple low cost pricing structure based on the number of habitable rooms in your property.  You should be able to work out the cost of your EPC simply using the
+            guide below however you can always <a href="contact.html">contact us</a> for a firm quotation.  There are not hidden costs or VAT to add!</p>
+            <div class="row">
+                <div class="col-md-6 pricingDiv">
+                    <img class="pricingImage" src="images/lowcostepcdaventry.jpg" th:alt="${altImage}"/>
+                </div>
+                <div class="col-md-6 pricing">
+                    <h3>Pricing</h3>
+                    <p>We have a very simple low cost pricing structure:</p>
+                    <ul>
+                        <li>For properties of up to 6 habitable rooms: £40</li>
+                        <ul>
+                            <li>e.g. 2 reception rooms, 4 bedrooms</li>
+                            <li>3 reception rooms, 3 bedrooms</li>
+                        </ul>
+                        <li>For each additional room add habitable room add £5</li>
+                        <ul>
+                            <li>e.g. 2 reception rooms, 5 bedrooms = £45</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <p class="quotationText">For a firm quotation or to discuss your requirements in more detail, contact us today.</p>
+            <p>Call us on 07769 696777 or email adamsepc@aol.com and we will get back to you.</p>
+        </div>
+        <th:block th:replace="headerfooter :: footer"></th:block>
+    </body>
+</html>

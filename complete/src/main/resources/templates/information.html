@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <link lang="en"></link>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" th:content="${metaDescription}"/>
+        <meta name="google-site-verification" content="I9Km4hhR8Nf265lMNg0dDpXtvcf_m3u9NcuRgZw2cXk" />
+        <link rel="icon" href="../../favicon.ico"/>
+        <title>EPC <th:block th:text="${location}">Daventry</th:block></title>
+        <th:block th:replace="headerFooter :: staticInclude"></th:block>
+    </head>
+    <body>
+        <th:block th:replace="headerFooter :: header"></th:block>
+        <div class="container preparingContainer">
+            <div class="row">
+                <div class="container epcInfoContainer">
+                    <div class="row">
+                        <h1 class="pricingHeader">EPC <th:block th:text="${location}">Daventry</th:block> Information</h1>
+                        <p>An EPC is needed whenever a property is:
+                        <ul>
+                            <li>built</li>
+                            <li>sold</li>
+                            <li>rented</li>
+                        </ul>
+                        </p>
+                        <p>You must order one for potential buyers and tenants before you market your property to sell or rent.</p>
+                        <p>An EPC contains:
+                        <ul>
+                            <li>information about your property’s energy use and typical energy costs</li>
+                            <li>recommendations about how to reduce energy use and save money</li>
+                            <li>an energy efficiency rating from A (most efficient) to G (least efficient) and is valid for 10 years.</li>
+                        </ul>
+                        </p>
+                        <p><a class="btn btn-default" href="contact.html" role="button">Click here to contact us, get a quote or book now</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <img class="conservationImage" src="/images/energy.jpeg" th:alt="${'accredited-epc-' + location}"/>
+                <h2>Preparing for your property's assessment</h2>
+                <p>Because your home cannot fail an Energy Performance Certificate, there is no right way or wrong way to present your home for the EPC. You can however improve the results of the assessment before we arrive.</p>
+                <p>Why? Well by increasing this final result, you are not only saving money on energy bills, but demonstrating to your potential buyer or tenant that you are serious about saving energy and the more work you put in now, the better the results, the more likely you are to secure your buyer or tenant.</p>
+                <p>Any upgrade you can do now will pay dividends to your results. Just by replacing your light bulbs with LED bulbs will increase your energy performance rating, upgrading the jacket on your hot water cylinder will increase the results. Laying deeper insulation in the roof will help also.</p>
+                <p>Remember, that the more you can do to promote your home in a good light, the less opportunity a buyer or tenant has to negotiate the price!</p>
+            </div>
+        </div>
+        <a id="info"></a>
+        <th:block th:replace="headerfooter :: footer"></th:block>
+    </body>
+</html>

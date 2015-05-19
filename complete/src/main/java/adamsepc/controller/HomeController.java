@@ -26,6 +26,58 @@ public class HomeController {
         return new ModelAndView("index", modelMap);
     }
 
+    @RequestMapping("/about.html")
+    public ModelAndView about(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
+        final ModelMap modelMap = new ModelMap();
+        modelMap.put("location", getLocation(host));
+        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("altImage", "EPC " + getLocation(host));
+        if(fromContact) {
+            modelMap.put("showContactMsg", true);
+        }
+        modelMap.put("sisterSites", getSisterSiteLinks(getLocation(host)));
+        return new ModelAndView("about", modelMap);
+    }
+
+    @RequestMapping("/information.html")
+    public ModelAndView information(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
+        final ModelMap modelMap = new ModelMap();
+        modelMap.put("location", getLocation(host));
+        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("altImage", "EPC " + getLocation(host));
+        if(fromContact) {
+            modelMap.put("showContactMsg", true);
+        }
+        modelMap.put("sisterSites", getSisterSiteLinks(getLocation(host)));
+        return new ModelAndView("information", modelMap);
+    }
+
+    @RequestMapping("/pricing.html")
+    public ModelAndView pricing(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
+        final ModelMap modelMap = new ModelMap();
+        modelMap.put("location", getLocation(host));
+        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("altImage", "EPC " + getLocation(host));
+        if(fromContact) {
+            modelMap.put("showContactMsg", true);
+        }
+        modelMap.put("sisterSites", getSisterSiteLinks(getLocation(host)));
+        return new ModelAndView("pricing", modelMap);
+    }
+
+    @RequestMapping("/contact.html")
+    public ModelAndView contact(@RequestHeader("host") String host, @RequestParam(required = false) boolean fromContact) {
+        final ModelMap modelMap = new ModelMap();
+        modelMap.put("location", getLocation(host));
+        modelMap.put("metaDescription", getMetaDescription(host));
+        modelMap.put("altImage", "EPC " + getLocation(host));
+        if(fromContact) {
+            modelMap.put("showContactMsg", true);
+        }
+        modelMap.put("sisterSites", getSisterSiteLinks(getLocation(host)));
+        return new ModelAndView("contact", modelMap);
+    }
+
     private Map<String, String> getSisterSiteLinks(final String location) {
         final Map<String,String> sisterSites = new HashMap<>();
         sisterSites.put("Daventry", "www.lowcostepcdaventry.co.uk");

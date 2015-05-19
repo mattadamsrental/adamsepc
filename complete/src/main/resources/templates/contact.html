@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <link lang="en"></link>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" th:content="${metaDescription}"/>
+        <meta name="google-site-verification" content="I9Km4hhR8Nf265lMNg0dDpXtvcf_m3u9NcuRgZw2cXk" />
+        <link rel="icon" href="../../favicon.ico"/>
+        <title>EPC <th:block th:text="${location}">Daventry</th:block></title>
+        <th:block th:replace="headerFooter :: staticInclude"></th:block>
+    </head>
+    <body>
+        <th:block th:replace="headerFooter :: header"></th:block>
+        <div class="container contactFormDiv">
+            <h1 class="pricing-header">Contact Adams EPC <th:block th:text="${location}">Daventry</th:block></h1>
+            <p class="contactHeading">If you have any questions, want a quote, or would like us to call you back to make an appointment please fill in the form and we'll get back to you!</p><br/>
+            <div class="col-md-3">
+                <label id="nameError" class="error">Please enter your name</label>
+                <p><label>Full name</label></p>
+                <label id="emailError" class="error">Please enter your email</label>
+                <p><label>Email address</label></p>
+                <label id="contactError" class="error">Please enter your contact number</label>
+                <p><label>Contact Number</label></p>
+                <p><label>Please select an option</label></p>
+                <p><label>Please tell us more about your query</label></p>
+            </div>
+            <div class="col-md-9">
+                <form id="contactFormForm" name="contactForm" action="/contact">
+                    <label id="nameErrorSpacer" class="error">&nbsp;</label>
+                    <p><input id="name" type="text" name="name"/></p>
+                    <label id="emailErrorSpacer" class="error">&nbsp;</label>
+                    <p><input id="email" type="text" name="email"/></p>
+                    <label id="contactErrorSpacer" class="error">&nbsp;</label>
+                    <p><input id="contact"  type="text" name="contact"/></p>
+                    <p>
+                        <input type="radio" name="enquiryType" value="booking"/><label>Make a booking</label>
+                        <input type="radio" name="enquiryType" value="quote"/><label>Give me a firm quote</label>
+                        <input type="radio" name="enquiryType" value="callme"/><label>Call me back</label>
+                    </p>
+                    <textarea rows="4" cols="50" name="enquiry"></textarea>
+                    <p><input id="submit-btn" type="button" value="Submit your query" onclick="javascript:submitQuery();"/></p>
+                </form>
+            </div>
+        </div>
+        <th:block th:replace="headerfooter :: footer"></th:block>
+    </body>
+</html>

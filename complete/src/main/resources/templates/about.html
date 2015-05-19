@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <link lang="en"></link>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" th:content="${metaDescription}"/>
+        <meta name="google-site-verification" content="I9Km4hhR8Nf265lMNg0dDpXtvcf_m3u9NcuRgZw2cXk" />
+        <link rel="icon" href="../../favicon.ico"/>
+        <title>EPC <th:block th:text="${location}">Daventry</th:block></title>
+        <th:block th:replace="headerFooter :: staticInclude"></th:block>
+    </head>
+    <body>
+        <th:block th:replace="headerFooter :: header"></th:block>
+        <div class="container pricingContainer">
+            <h1 class="pricing-header">Adams EPC <th:block th:text="${location}">Daventry</th:block></h1>
+                <div class="accreditedImages">
+                    <ul>
+                        <li>Fully accredited energy assessor!</li>
+                        <li>CRB criminal record checked!</li>
+                        <li>Peace of mind and convenience!</li>
+                    </ul>
+                    <img class="accreditedImage" src="/images/accredited.png" th:alt="${'accredited-epc-' + location}"/>
+                </div>
+                <h2>About Us</h2>
+                <p>Adams EPC provide energy performance certificates in Northants and surrounding areas (check our <a href="#otherSites">other sites</a> for full coverage details).</p>
+                <p>Our locally bases energy assessor is fully accredited by NHER-SAVA and Stroma and has undergone CRB checks to give you confidence and peace of mind.</p>
+                <p>With over 6 years experience in the field and over 6000 assessments completed, you can be sure that you can trust us to provide a no hassle and efficient local service.</p>
+                <p>To book your appointment, or if you want us to call you back to discuss further details, please use our <a href="#">contact form</a>. Alternatively you could give us a call on (07769) 696777 and we will happy to discuss your specific requirements.</p>
+                <p>We can often provide same day or short notice appointments at your convenience and you can pay on the day.</p>
+        </div>
+        <th:block th:replace="headerfooter :: footer"></th:block>
+    </body>
+</html>

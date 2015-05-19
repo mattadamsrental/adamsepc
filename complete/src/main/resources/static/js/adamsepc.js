@@ -1,37 +1,32 @@
-$(document).ready( function () {
-	$('.contactFormDiv').hide();
-});
-
-function scrollToContactForm() {
-	$('.contactMsg').hide();
-	$('.contactFormDiv').show();
-	$('html, body').animate({scrollTop: $(".contactFormDiv").offset().top}, 1000);
-	$('.pricingContainer').hide();
-	$('.detailsContainer').hide();
-};
-
 function submitQuery() {
-	$('.contactMsg').hide();
-	$('.epcInfoContainer').hide();
-	$('.jumbotron').hide();
-	$('.contactFormDiv').html("<h1>Please wait while your message is sent.</h1>");
-};
+	var name = $('#name').val();
+	var email = $('#email').val();
+	var contact = $('#contact').val();
+	var query = $('#query').val();
 
-function scrollToPricing() {
-	$('.contactMsg').hide();
-	$('.contactFormDiv').hide();
-	$('.detailsContainer').show();
-	$('.pricingContainer').show();
-	$('html, body').animate({scrollTop: $(".pricingContainer").offset().top}, 1000);
-};
-
-function refresh() {
-	$('.contactMsg').hide();
-	window.location="../../templates/index.html";
-};
-
-function scrollToMoreInfo() {
-	$('.contactMsg').hide();
-	$('.contactFormDiv').hide();
-	$('html, body').animate({scrollTop: $("#info").offset().top - 60}, 1000);	
+	var valid = true;
+	if(name=='') {
+		$('#nameError').show();
+		$('#nameErrorSpacer').show();
+		$('#name').addClass('errorInput');
+		valid = false;
+	}
+	if(email=='') {
+		$('#emailError').show();
+		$('#emailErrorSpacer').show();
+		$('#email').addClass('errorInput');
+		valid = false;
+	}
+	if(contact=='') {
+		$('#contactError').show();
+		$('#contactErrorSpacer').show();
+		$('#contact').addClass('errorInput');
+		valid = false;
+	}
+	if(valid) {
+		$('#contactFormForm').submit();
+		$('#submit-btn').val('Submitting your query, please wait...')
+		$('#submit-btn').attr('disabled', 'true');
+	}
+	return valid;
 }

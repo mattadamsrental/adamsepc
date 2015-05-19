@@ -1,16 +1,18 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  padding-top: 110px;
   padding-bottom: 20px;
   font-size: 1.5em;
 	font-family: Lucida Sans Unicode;
 }
 
 .navbar {
-	height: 80px;
+	height: 140px;
 }
 .btn {
+	font-size: 1em;
 	margin-bottom: 20px;
+	margin-top: 10px;
 }
 h1 {
 	font-size: 40px !important;
@@ -148,4 +150,32 @@ h1 {
 }
 .sisterSite {
 	padding-right: 20px;
+}
+.pricing-header {
+	padding-top: 20px;
+}
+#nameError {
+	display: none;
+}
+#emailError {
+	display: none;
+}
+#contactError {
+	display: none;
+}
+#nameErrorSpacer {
+	display: none;
+}
+#emailErrorSpacer {
+	display: none;
+}
+#contactErrorSpacer {
+	display: none;
+}
+.error {
+	color: red;
+	font-size: 0.8em;
+}
+.errorInput {
+	border-color: red;
 }
